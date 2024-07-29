@@ -27,7 +27,7 @@ void QuantizeBits::dequantize(swaml_fp32_t* output, size_t size) {
 	}
 }
 
-void QuantizeBits::quantize4(const swaml_fp32_t* input, size_t size) {    // QK4_0
+void QuantizeBits::quantize4(const swaml_fp32_t* input, size_t size) {
 	static const int qk = 32;
 	assert(size % qk == 0);
 
@@ -65,7 +65,7 @@ void QuantizeBits::quantize4(const swaml_fp32_t* input, size_t size) {    // QK4
 	block_.setQuantizedValues(quantizedValues.data(), quantizedValues.size());
 }
 
-void QuantizeBits::quantize4d(const swaml_fp32_t* input, size_t size) {    // QK4_1
+void QuantizeBits::quantize4d(const swaml_fp32_t* input, size_t size) {
 	static const int qk = 32;
 	assert(size % qk == 0);
 
@@ -103,7 +103,7 @@ void QuantizeBits::quantize4d(const swaml_fp32_t* input, size_t size) {    // QK
 	block_.setQuantizedValues(quantizedValues.data(), quantizedValues.size());
 }
 
-void QuantizeBits::dequantize4(swaml_fp32_t* output, size_t size) {    // QK4_0
+void QuantizeBits::dequantize4(swaml_fp32_t* output, size_t size) {
 	static const int qk = 32;
 	assert(size % qk == 0);
 
@@ -122,7 +122,7 @@ void QuantizeBits::dequantize4(swaml_fp32_t* output, size_t size) {    // QK4_0
 	}
 }
 
-void QuantizeBits::dequantize4d(swaml_fp32_t* output, size_t size) {    // QK4_1
+void QuantizeBits::dequantize4d(swaml_fp32_t* output, size_t size) {
 	static const int qk = 32;
 	assert(size % qk == 0);
 
